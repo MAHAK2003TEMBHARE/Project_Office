@@ -1,0 +1,155 @@
+/* Reset & global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container (Signup, Signin, Dashboard) */
+.form-container,
+.signup-container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Inputs & selects */
+input,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #9b59b6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+/* Password field wrapper for eye icon */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for eye icon */
+}
+
+.input-wrapper span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 15px;
+  background-color: #9b59b6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e44ad;
+  transform: translateY(-2px);
+}
+
+/* Links */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p a {
+  color: #9b59b6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard role message */
+.role-message {
+  background-color: #f3e5f5;
+  color: #8e44ad;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+/* Logout button override */
+.form-container button.logout {
+  background-color: #e74c3c;
+  margin-top: 20px;
+}
+
+.form-container button.logout:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container,
+  .signup-container {
+    padding: 30px 20px;
+  }
+
+  input,
+  select,
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
